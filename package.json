@@ -3,16 +3,39 @@
   "version": "1.0.0",
   "description": "Inmatic App",
   "main": "main.js",
+  "build": {
+    "appId": "com.coneptum.inmatic.app",
+    "productName": "Inmatic App",
+    "extraResources": [
+      {
+        "from" : "./assets",
+        "to": "assets"
+
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis" : {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
   "scripts": {
-    "start": "electron .", 
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "inmatic"
   ],
-  "author": "Coneptum",
-  "license": "ISC",
+  "author": "Coneptum S.L.",
+  "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^21.1.0"
+    "electron": "^21.1.0",
+    "electron-builder": "^23.6.0"
   }
 }
