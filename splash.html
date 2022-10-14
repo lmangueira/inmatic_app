@@ -1,0 +1,86 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div class="logo"></div>
+  <div class="progress-line"></div>
+</body>
+
+
+<style>
+  body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(90deg, #3cf, #5d3c9f 40%);
+  }
+
+  .logo {
+    margin: 98px auto;
+    background-image: url('assets/logo_blanc.png');
+    width: 445;
+    height: 92;
+  }
+
+  .progress-line,
+  .progress-line:before {
+    height: 15px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .progress-line {
+    background-color: #b3d4fc;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .progress-line:before {
+    /* background-color: #3f51b5; */
+    background-color: #fff;
+    content: '';
+    -webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  @-webkit-keyframes running-progress {
+    0% {
+      margin-left: 0px;
+      margin-right: 100%;
+    }
+
+    50% {
+      margin-left: 25%;
+      margin-right: 0%;
+    }
+
+    100% {
+      margin-left: 100%;
+      margin-right: 0;
+    }
+  }
+
+  @keyframes running-progress {
+    0% {
+      margin-left: 0px;
+      margin-right: 100%;
+    }
+
+    50% {
+      margin-left: 25%;
+      margin-right: 0%;
+    }
+
+    100% {
+      margin-left: 100%;
+      margin-right: 0;
+    }
+  }
+</style>
+
+
+</html>
