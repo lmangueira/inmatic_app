@@ -23,6 +23,13 @@
       "perMachine": true,
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "tar.xz"
+      ],
+      "category": "Office"
     }
   },
   "scripts": {
@@ -32,7 +39,7 @@
   "keywords": [
     "inmatic"
   ],
-  "author": "Coneptum S.L.",
+  "author": "Coneptum S.L. <soporte@inmatic.ai>",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^21.1.0",
