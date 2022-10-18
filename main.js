@@ -4,6 +4,7 @@ const path = require('path')
 
 function createMainWindow() {
     const __assets_dir = './assets'
+    const _icon = __assets_dir + '/icon/icon.png'
 
     const mainWindow = new BrowserWindow({
         title: 'Inmatic.ai',
@@ -12,7 +13,7 @@ function createMainWindow() {
         minWidth: 1024,
         minHeight: 768,
         show: false,
-        icon: __assets_dir + '/icon/icon.png',
+        icon: _icon,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
           }
@@ -28,7 +29,9 @@ function createMainWindow() {
         height: 300, 
         transparent: true, 
         frame: false, 
-        alwaysOnTop: true 
+        alwaysOnTop: true,
+        icon: _icon,
+        skipTaskbar: true
       });
 
     splashWindow.loadFile('splash.html')
